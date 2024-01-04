@@ -17,6 +17,7 @@ Function:
 def canUnlockAll(boxes)
 """
 
+
 def canUnlockAll(boxes):
     """
     An algorithm that determines if all the boxes can be opened.
@@ -24,20 +25,21 @@ def canUnlockAll(boxes):
     Args:
        boxes: is a list of lists
     """
-    unlocked_boxes = {0:'unlocked'}
+    o_bxs = [0]
     
     for number, box in enumerate(boxes):
-        if number in unlocked_boxes:
+        if number in o_bxs:
             for key in box:
-                if key not in unlocked_boxes:
-                    unlocked_boxes[key] = 'unlocked'
+                if key not in o_bxs:
                     if key < len(boxes):
+                        o_bxs.append(key)
                         for box_key in boxes[key]:
-                            if box_key not in unlocked_boxes:
-                                unlocked_boxes[box_key] = 'unlocked'
+                            if box_key not in o_bxs:
+                                if box_key < len(boxes):
+                                    o_bxs.append(box_key)
 
-    if len(boxes) == len(unlocked_boxes):
+    if len(boxes) == len(o_bxs):
         return True
     else:
         return False
-
+    
