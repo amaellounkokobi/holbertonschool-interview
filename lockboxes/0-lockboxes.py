@@ -31,9 +31,10 @@ def canUnlockAll(boxes):
             for key in box:
                 if key not in unlocked_boxes:
                     unlocked_boxes[key] = 'unlocked'
-                    for box_key in boxes[key]:
-                        if box_key not in unlocked_boxes:
-                            unlocked_boxes[box_key] = 'unlocked'
+                    if key < len(boxes):
+                        for box_key in boxes[key]:
+                            if box_key not in unlocked_boxes:
+                                unlocked_boxes[box_key] = 'unlocked'
 
     if len(boxes) == len(unlocked_boxes):
         return True
