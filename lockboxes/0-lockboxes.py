@@ -26,20 +26,17 @@ def canUnlockAll(boxes):
        boxes: is a list of lists
     """
     o_bxs = [0]
-    
-    for number, box in enumerate(boxes):
-        if number in o_bxs:
+
+    for num, box in enumerate(boxes):
+        if num in o_bxs:
             for key in box:
-                if key not in o_bxs:
-                    if key < len(boxes):
-                        o_bxs.append(key)
-                        for box_key in boxes[key]:
-                            if box_key not in o_bxs:
-                                if box_key < len(boxes):
-                                    o_bxs.append(box_key)
+                if key not in o_bxs and key < len(boxes):
+                    o_bxs.append(key)
+                    for b_key in boxes[key]:
+                        if b_key not in o_bxs and b_key < len(boxes):
+                            o_bxs.append(b_key)
 
     if len(boxes) == len(o_bxs):
         return True
     else:
         return False
-    
