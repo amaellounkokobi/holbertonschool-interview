@@ -30,15 +30,17 @@ listint_t *insert_node(listint_t **head, int number)
     else
     {
       
-        while (current->n >= number && prev->n <= number)
-	  {
-	    prev = current;
-	    current = current->next;
-	  }
-	
-	prev->next = new;
-	new->next = current;
-    }
+      while (current != NULL)
+	{
+	  current = current->next;
+	  if (current->n >= number)
+	    break;
+	  prev = prev->next;
+	}
+
+      prev->next = new;
+      new->next = current;
+    }    
 
     return (new);
 }
