@@ -21,8 +21,8 @@ def minOperations(n):
     if n < 1:
         return 0
     elif n % 2 == 0:
-        return (n / 2) + 2
+        return int((n / 2) + 2)
     elif n % 3 == 0:
-        return (n / 3) + 3
+        return int((n / 3) + 3)
     else:
         return n_op
