@@ -24,12 +24,15 @@ def minOperations(n):
 
     Args:
        n:number of operations
-    """    
+    """
+    prime = 0
     if n <= 1:
         return 0
     else:
-        for num in range(n-1, 2, -1):
-            if n % num == 0 and is_prime(num):
-                return int((n / num) + num)
+        for num in range(n - 1, 2, -1):
+            if  n % num == 0 and is_prime(num): 
+                prime = num
+                print(prime)
+                return int(n / prime) + prime
         else:
             return n
