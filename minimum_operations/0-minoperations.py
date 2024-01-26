@@ -8,6 +8,8 @@ of operations needed to result in exactly n H characters in the file.
 Function:
    def minOperations(n)
 """
+
+
 def is_prime(n):
     """
     Is a prime number
@@ -16,6 +18,7 @@ def is_prime(n):
         if n % num == 0:
             return False
     return True
+
 
 def minOperations(n):
     """
@@ -30,7 +33,7 @@ def minOperations(n):
         return 0
     else:
         for num in range(n - 1, 2, -1):
-            if  n % num == 0 and is_prime(num): 
+            if n % num == 0 and is_prime(num):
                 prime = num
                 return int(n / prime) + prime
         else:
