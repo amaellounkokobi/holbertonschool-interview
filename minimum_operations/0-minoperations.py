@@ -18,6 +18,7 @@ def minOperations(n):
     Args:
        n:number of operations
     """
+
     if n < 1:
         return 0
     elif n % 2 == 0:
@@ -25,4 +26,4 @@ def minOperations(n):
     elif n % 3 == 0:
         return int((n / 3) + 3)
     else:
-        return n_op
+        return n
