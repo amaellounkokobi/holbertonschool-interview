@@ -18,13 +18,14 @@ def minOperations(n):
     Args:
        n:number of operations
     """
-
     
     if n <= 1:
         return 0
-    elif n % 3 == 0:
-        return int((n / 3) + 3)
-    elif n % 2 == 0:
-        return int((n / 2) + 2)
     else:
-        return n
+        for num in range(n-1, 2, -1):
+            print('num:',num)
+            if n % num == 0:
+                print(n,'/',num,'+',num)        
+                return int((n / num) + num)
+        else:
+            return n
