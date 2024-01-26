@@ -32,7 +32,6 @@ def minOperations(n):
         for num in range(n - 1, 2, -1):
             if  n % num == 0 and is_prime(num): 
                 prime = num
-                print(prime)
                 return int(n / prime) + prime
         else:
             return n
