@@ -22,9 +22,9 @@ def minOperations(n):
     
     if n <= 1:
         return 0
-    elif n % 2 == 0:
-        return int((n / 2) + 2)
     elif n % 3 == 0:
         return int((n / 3) + 3)
+    elif n % 2 == 0:
+        return int((n / 2) + 2)
     else:
         return n
