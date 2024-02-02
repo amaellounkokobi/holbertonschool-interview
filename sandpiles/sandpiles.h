@@ -5,8 +5,7 @@
 
 /**
  * 
- * sandepiles_sum - Print 3x3 grids sum
- * 
+ * sandepiles_sum - Print 3x3 grids sum 
  * @grid1: Left 3x3 grid
  * @grid2: Right 3x3 grid
  *
