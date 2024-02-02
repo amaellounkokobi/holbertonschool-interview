@@ -7,6 +7,7 @@
  *
  * Description: Check if a grid is stable
  * for Holberton project
+ * Return: int 1 if stable 0 if not
  */
 int is_stable(int grid1[3][3]){
 
