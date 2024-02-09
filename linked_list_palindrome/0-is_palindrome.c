@@ -52,7 +52,7 @@ int * get_palindrome_tab(listint_t **head, int n)
 int is_palindrome(listint_t **head)
 {
     listint_t *current;
-    unsigned int n; /* number of nodes */
+    int n; /* number of nodes */
     int *palindrome;
     int *part1;
     int *part2;
