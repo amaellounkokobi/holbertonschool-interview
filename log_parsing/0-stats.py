@@ -34,8 +34,8 @@ def parse_lines(lines_array):
 
     for line in lines_array:
         infos = line.split(" ")
-        file_size += int(infos[7])
-        status_list.append(infos[8])
+        file_size += int(infos[8])
+        status_list.append(int(infos[7]))
 
     print("File size:", file_size)
 
@@ -59,3 +59,4 @@ try:
 
 except KeyboardInterrupt:
     parse_lines(buffer_array)
+
