@@ -34,7 +34,7 @@ def parse_lines(lines_array):
 
     for line in lines_array:
         infos = line.split(" ")
-        if len(infos) == 9:
+        if len(infos) >= 5:
             i_size = infos[len(infos) - 1]
             i_code = infos[len(infos) - 2]
 
