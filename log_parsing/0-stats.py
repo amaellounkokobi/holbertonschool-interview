@@ -54,7 +54,7 @@ try:
         line = line.rstrip()
         buffer_array.append(line)
 
-        if len(buffer_array) == 10:
+        if len(buffer_array) % 10 == 0:
             parse_lines(buffer_array)
 
 except KeyboardInterrupt:
