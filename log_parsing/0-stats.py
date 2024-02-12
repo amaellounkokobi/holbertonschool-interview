@@ -46,18 +46,17 @@ def parse_lines(lines_array):
 
 # Array that will containes lines
 buffer_array = []
-
+                                                                                                                                                                   
 try:
     for line in sys.stdin:
         # Read STDIN get the lines
         line = line.rstrip()
         buffer_array.append(line)
-
-        if len(buffer_array) == 11:
+        
+        if len(buffer_array) == 10:
             parse_lines(buffer_array)
 
 except KeyboardInterrupt:
     parse_lines(buffer_array)
 else:
     parse_lines(buffer_array)
-
