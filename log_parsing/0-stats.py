@@ -37,8 +37,11 @@ def parse_lines(lines_array):
         if len(infos) == 9:
             i_size = infos[len(infos) - 1]
             i_code = infos[len(infos) - 2]
-            if i_size.isnumeric() and i_code.isnumeric():
+
+            if i_size.isnumeric():
                 file_size += int(i_size)
+
+            if i_code.isnumeric():
                 status_list.append(int(i_code))
 
     print("File size:", file_size)
