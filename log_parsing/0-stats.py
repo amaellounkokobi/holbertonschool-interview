@@ -59,4 +59,6 @@ try:
 
 except KeyboardInterrupt:
     parse_lines(buffer_array)
+else:
+    parse_lines(buffer_array)
 
