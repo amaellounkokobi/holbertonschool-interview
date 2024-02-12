@@ -34,8 +34,8 @@ def parse_lines(lines_array):
     
     for line in lines_array:
         infos = line.split(" ")
-        i_size = infos[len(info) - 1]
-        i_code = infos[len(info) - 2]
+        i_size = infos[len(infos) - 1]
+        i_code = infos[len(infos) - 2]
         file_size += int(i_size)
         status_list.append(int(i_code))
 
