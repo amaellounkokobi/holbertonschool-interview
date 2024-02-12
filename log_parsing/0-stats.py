@@ -31,13 +31,14 @@ def parse_lines(lines_array):
                   404,
                   405,
                   500]
-    
+
     for line in lines_array:
         infos = line.split(" ")
-        i_size = infos[len(infos) - 1]
-        i_code = infos[len(infos) - 2]
-        file_size += int(i_size)
-        status_list.append(int(i_code))
+        if len(infos) == 9:
+            i_size = infos[len(infos) - 1]
+            i_code = infos[len(infos) - 2]
+            file_size += int(i_size)
+            status_list.append(int(i_code))
 
     print("File size:", file_size)
 
