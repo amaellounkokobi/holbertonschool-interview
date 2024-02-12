@@ -44,15 +44,16 @@ def parse_lines(lines_array):
         if counter != 0:
             print('{}: {}'.format(status, counter))
 
+
 # Array that will containes lines
 buffer_array = []
-                                                                                                                                                                   
+
 try:
     for line in sys.stdin:
         # Read STDIN get the lines
         line = line.rstrip()
         buffer_array.append(line)
-        
+
         if len(buffer_array) == 10:
             parse_lines(buffer_array)
 
