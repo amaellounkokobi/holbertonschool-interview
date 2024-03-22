@@ -60,32 +60,30 @@ int slide_left(int *line, int *line2, size_t size)
  */
 int slide_right(int *line, int *line2, size_t size)
 {
-  size_t i;
+  int i;
   int index;
   size_t curr_len;
-  int a;
 
-  a = i;
   index = 0;
   curr_len = size - 1;
   
-  for (a = size - 1; a >= 0; a--)
+  for (i = size - 1; i >= 0; i--)
     {
-      if (line2[a] != 0)
+      if (line2[i] != 0)
 	{
 	  if (index == 0)
 	    {
-	      index = line2[a];
+	      index = line2[i];
 	    }
-	  else if (index == line2[a])
+	  else if (index == line2[i])
 	    {    
-	      line[curr_len] = index + line2[a];
+	      line[curr_len] = index + line2[i];
 	      index = 0;
 	      curr_len--;
 	    }
 	  else
 	    {
-	      index = line2[a];
+	      index = line2[i];
 	    }
 	}
     }
