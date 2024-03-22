@@ -1,0 +1,51 @@
+n=0
+0
+n=1
+0
+n=2
+C,P
+---------------
+n=3
+C,P,P
+---------------
+n=4
+C,P,C,P
+---------------
+n=5
+C,P,P,P,P
+---------------
+n=6 3 * 2
+C,P,P,C,P
+---------------
+n=7
+C,P,P,P,P,P,P
+---------------
+n=8 2 * 2 * 2
+C,P,C,P,C,P
+---------------
+n=9  3 * 3
+C,P,P,C,P,P
+---------------
+n=10, 5 * 2
+C,P,P,P,P,C,P
+---------------
+n=11 
+C,P,P,P,P,P,P,P,P,P,P
+---------------
+n=12 2 * 3 * 2
+C,P,P,C,P,C,P
+
+
+
+
+
+n est inferieur a 1
+retourne impossible
+
+n est un multiple de 2 (if n mod 2 == 0)
+n_op = (n / 2) + 2 
+n est un multiple de 3 (if n mod 3 == 0)
+n_op = (n / 3) + 3
+sinon
+n_op = n
+
